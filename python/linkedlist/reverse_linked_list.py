@@ -11,3 +11,14 @@ def reverse_list(head):
         prev = head
         head = next_node
     return prev
+
+if __name__ == "__main__":
+    head = ListNode(1)
+    head.next = ListNode(2)
+    head.next.next = ListNode(3)
+    head.next.next.next = ListNode(4)
+    head.next.next.next.next = ListNode(5)
+    result = reverse_list(head)
+    while result:
+        print(result.val)
+        result = result.next
